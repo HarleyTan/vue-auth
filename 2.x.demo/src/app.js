@@ -86,19 +86,19 @@ Vue.router = new VueRouter({
     }]
 });
 
-// import axios from 'axios';
-// import VueAxios from 'vue-axios';
-// Vue.use(VueAxios, axios);
-// Vue.axios.defaults.baseURL = 'https://api-demo.websanova.com/api/v1';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+Vue.use(VueAxios, axios);
+Vue.axios.defaults.baseURL = 'https://api-demo.websanova.com/api/v1';
 
 // Http 
-Vue.http.options.root = 'https://api-demo.websanova.com/api/v1';
+// Vue.http.options.root = 'https://api-demo.websanova.com/api/v1';
 
 // Vue Auth
 Vue.use(require('../../src/index.js'), {
     auth: require('../../drivers/auth/bearer.js'),
-    http: require('../../drivers/http/vue-resource.1.x.js'),
-    // http: require('../../drivers/http/axios.1.x.js'),
+    // http: require('../../drivers/http/vue-resource.1.x.js'),
+    http: require('../../drivers/http/axios.1.x.js'),
     router: require('../../drivers/router/vue-router.2.x.js'),
     rolesVar: 'role',
     facebookOauth2Data: {
